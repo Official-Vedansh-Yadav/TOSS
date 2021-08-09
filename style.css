@@ -1,0 +1,132 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background: #c6edff;
+    background: -moz-linear-gradient(to right,  #c6edff 0%,#a3c6ff 100%); 
+    background: -webkit-linear-gradient(to right,  #c6edff 0%,#a3c6ff 100%); 
+    background: linear-gradient(to right,  #c6edff 0%,#a3c6ff 100%);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 100px;
+}
+
+.container > *:not(:first-child){
+    padding: 10px 0;
+}
+
+.heading{
+    width: 50%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #74b9ff;
+    color: white;
+    font-size: 5rem;
+}
+
+.head,.tail{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head{
+    background: limegreen;
+}
+
+.tail{
+    background: #a29bfe;
+}
+
+.buttons{
+    margin-top: 200px;
+}
+
+.btn{
+    width: 100px;
+    height: 50px;
+    background: #e15f41;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.result{
+    width: 50%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #546de5;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.change-head{
+    animation: change-head 2s linear;
+}
+
+.change-tail{
+    animation: change-tail 2s linear;
+}
+
+/* animation for the changing the zindex of head element */
+@keyframes change-head{
+    0%{
+        z-index: -10;
+        transform: rotatey(0deg);
+    }
+    25%{
+        z-index: 10;
+    }
+    50%{
+        z-index: -10;
+    }
+    75%{
+        z-index: 10;
+    }
+    100%{
+        z-index: -10;
+        transform: rotatey(1800deg);
+    }
+}
+
+@keyframes change-tail {
+    0%{
+        z-index: 10;
+        transform: rotatey(0deg);
+    }
+    25%{
+        z-index: -10;
+    }
+    50%{
+        z-index: 10;
+    }
+    75%{
+        z-index: -10;
+    }
+    100%{
+        z-index: 10;
+        transform: rotatey(1800deg);
+    }
+}
