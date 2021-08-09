@@ -80,6 +80,7 @@ body{
     background: #546de5;
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
+    padding: 20px !important;
 }
 
 .change-head{
